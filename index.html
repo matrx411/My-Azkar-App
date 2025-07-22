@@ -18,39 +18,90 @@
         .screenshots img { width: 100%; max-width: 250px; border-radius: 10px; border: 1px solid #ddd; }
         .install-notes { margin-top: 40px; background-color: #fffbeb; border: 1px solid #fde081; border-radius: 8px; padding: 20px; text-align: right; line-height: 1.7; }
         .install-notes h3 { margin-top: 0; color: #d35400; }
+        
+        /* ======== كود CSS الجديد الخاص بقسم الفيديو والصورة ======== */
+        .showcase-section {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 25px;
+        }
+        .showcase-item {
+            flex: 1;
+            min-width: 300px;
+        }
+        .showcase-item img {
+            width: 100%;
+            max-width: 320px; /* تحديد عرض أقصى للصورة */
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin: 0 auto; /* لتوسيط الصورة داخل الخلية */
+            display: block;
+        }
+        .showcase-item iframe {
+            width: 100%;
+            aspect-ratio: 9 / 16; /* أبعاد مناسبة للفيديو العمودي (Shorts) أو العادي */
+            border-radius: 15px;
+            border: 1px solid #ddd;
+        }
+        .showcase-item h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        /* ======== نهاية كود CSS الجديد ======== */
+
         footer { margin-top: 30px; color: #95a5a6; font-size: 0.9rem; }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- تم تعديل اسم ملف الأيقونة -->
         <img src="2.png" alt="أيقونة تطبيق أذكار الصباح والمساء" class="app-icon">
         
-        <!-- تم تعديل العنوان -->
         <h1>اذكار الصباح والمساء</h1>
         
         <p class="tagline">بصوت الشيخ محمد إسماعيل المقدم - مجاني وبدون إعلانات</p>
 
-        <!-- تم تعديل رابط ملف الـ APK بناءً على الإصدار الأخير -->
         <a href="https://github.com/matrx411/My-Azkar-App/releases/download/123/AzkarApp.apk" class="download-button">تحميل التطبيق الآن (APK)</a>
 
         <h2 class="section-title">لقطات من التطبيق</h2>
         <div class="screenshots">
-            <!-- تم تعديل أسماء صور لقطات الشاشة -->
             <img src="1.jpg" alt="لقطة شاشة 1">
             <img src="3.jpg" alt="لقطة شاشة 2">
-            <img src="4.jpg" alt="لقطة شاشة 3">
-            <img src="5.jpg" alt="لقطة شاشة 4">
+            <!-- تم حذف الصور القديمة من هذا القسم لعدم التكرار -->
         </div>
+
+        <!-- ======== القسم الجديد: شرح الفيديو بجانب لقطة الشاشة ======== -->
+        <h2 class="section-title">شرح التطبيق</h2>
+        <div class="showcase-section">
+            
+            <!-- (1) قسم الفيديو -->
+            <div class="showcase-item">
+                <h3>شرح بالفيديو</h3>
+                <!--  =====> الصق رابط الفيديو الخاص بك هنا مكان # <===== -->
+                <iframe src="https://www.youtube.com/embed/SElZgdWznP8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+            <!-- (2) قسم لقطة الشاشة الطويلة -->
+            <div class="showcase-item">
+                <h3>مميزات رئيسية</h3>
+                <!-- ====> تأكد من أن اسم هذه الصورة صحيح `5.jpg` <==== -->
+                <img src="5.jpg" alt="مميزات التطبيق">
+            </div>
+
+        </div>
+        <!-- ======== نهاية القسم الجديد ======== -->
 
         <div class="install-notes">
             <h3>ملاحظة هامة عند التثبيت</h3>
-            <p>بعد تحميل الملف، قد يطلب منك الهاتف السماح بـ "تثبيت التطبيقات من مصادر غير معروفة" أو "Install from unknown sources". هذا إجراء أمان قياسي في أندرويد.</p>
+            <p>بعد تحميل الملف، قد يطلب منك الهاتف السماح بـ "تثبيت التطبيقات من مصادر غير معروفة". هذا إجراء أمان قياسي في أندرويد.</p>
             <p><strong>تطبيقنا آمن 100% بإذن الله. قم بتفعيل الخيار لتثبيت التطبيق.</strong></p>
         </div>
 
         <footer>
-            <!-- ******** التعديل هنا ******** -->
             <p>هذا التطبيق صدقة جارية على روح والدي رحمه الله، نسألكم الدعاء له بالرحمة والمغفرة.</p>
         </footer>
     </div>
